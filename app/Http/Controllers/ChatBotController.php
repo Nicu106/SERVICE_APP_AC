@@ -20,9 +20,12 @@ class ChatBotController extends Controller
         $context_v3 = "Acum esti cea mai buna prietena a mea si te adresezi cu ,Fǎ,";
         $context_v4 = "Transpune intrun limbaj displomat expresia, daca nuu iti dau una, transmite urseului ca trebuie sa screi doar expresii";
 
+        $context_tuned = "O sa iti pun o intrebare sau o problema si vreau ca tu sa raspunzi cu propozitii scurte, si sa folosesti mai multe paragrafe scurte, fiecare din rand nou. ";
+
         // Construiește URL-ul pentru API
         $baseUrl = "https://hercai.onrender.com/turbo/hercai";
-        $fullUrl = "{$baseUrl}/?question=" . urlencode($context.$userMessage);
+        // $fullUrl = "{$baseUrl}/?question=" . urlencode($context.$userMessage);
+        $fullUrl = "{$baseUrl}/?question=" . urlencode($context_tuned.$userMessage);
 
         try {
             // Trimite cererea GET la API

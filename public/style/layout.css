@@ -1,9 +1,24 @@
-body {
-    background-color: rgba(0, 0, 0, 1) !important;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --app-width: 400px;
+    --accent-color: rgba(255, 98, 0, 1);
+    --accent-background-color: rgba(255, 98, 0, 0.15);
 }
 
 * {
-	color: white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 1) !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+    max-width: var(--app-width);
+    margin: 0 auto;
 }
 
 .custom-navbar {
@@ -12,7 +27,9 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    left: 0;
+    max-width: calc(var(--app-width) + 4px);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -35,10 +52,29 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 10px;
     width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: black;
+    max-width: calc(var(--app-width) + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-header i {
+    color: var(--accent-color);
 }
 
 .custom-header h1 {
     font-size: 24px;
     margin: 0;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.main-content {
+    padding-top: 60px;
 }

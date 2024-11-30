@@ -1,12 +1,19 @@
-.custom-card {
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+.custom-card:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
   width: 100%;
+  margin-bottom: 16px;
+}
+
+.home-container {
+  padding-bottom: 70px;
 }
 
 .card-header {
   padding: 10px 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -16,8 +23,23 @@
   font-weight: bold;
 }
 
+.card-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.card-job-title {
+  font-size: 14px;
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 .card-bottom {
-  padding: 10px 20px;
+  padding: 14px 10px;
 }
 
 .card-likes {
@@ -43,22 +65,45 @@
   margin-bottom: 6px;
 }
 
+.card-actions .buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-actions .buttons button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-actions i {
+  font-size: 22px;
+}
+
 .price-tag {
   font-size: 14px;
-  margin: 0;
+  background-color: var(--accent-background-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--accent-color);
+}
+
+.username {
+  font-weight: bold;
+  /* color: var(--accent-color); */
 }
 
 .like-icon * {
-  color: rgb(167, 0, 0) !important;
-}
-
-.send-icon {
-  height: 6px;
-  width: 10px;
+  /* color: rgb(205, 34, 34) !important; */
 }
 
 .send-icon * {
-  color: rgb(63, 115, 184) !important;
+  /* color: rgb(84, 138, 209) !important; */
 }
 
 .card-image {

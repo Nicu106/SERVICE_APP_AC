@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ac-deployment
+spec:
+  selector:
+    matchLabels:
+      app: app-ac
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: app-ac
+    spec:
+      dnsPolicy: ClusterFirst
+      dnsConfig:
+        nameservers:
+          - 8.8.8.8
+          - 8.8.4.4
+          - 1.1.1.1
+      containers:
+      - name: app-ac
+        image: cugureanu/app-ac:latest
+        ports:
+        - containerPort: 8000
