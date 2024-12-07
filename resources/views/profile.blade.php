@@ -55,26 +55,26 @@
             <div class="portfolio-container">
                 <div class="portfolio-item">
                     <div class="portfolio-item-image">
-                        <img src="user_pictures/1.jpeg" alt="Portfolio Item 1">
+                        <img src="img/mihaela.jpg" alt="Portfolio Item 1">
                     </div>
                     <div class="portfolio-item-name">
-                        University
+                        Mihaela
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-item-image">
-                        <img src="user_pictures/1.jpeg" alt="Portfolio Item 1">
+                        <img src="img/catalin.jpg" alt="Portfolio Item 1">
                     </div>
                     <div class="portfolio-item-name">
-                        University
+                        Cătălin
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-item-image">
-                        <img src="user_pictures/1.jpeg" alt="Portfolio Item 1">
+                        <img src="img/chiril.jpg" alt="Portfolio Item 1">
                     </div>
                     <div class="portfolio-item-name">
-                        University
+                        Chiril
                     </div>
                 </div>
             </div>
@@ -183,11 +183,11 @@
         }
 
         .user-actions button {
-            background-color: rgba(255, 98, 0, 0.15);
+            background-color: var(--accent-background-color);
             border: none;
             border-radius: 10px;
             padding: 5px 10px;
-            color: rgba(255, 98, 0, 1);
+            color: var(--accent-color);
             font-size: 14px;
             display: flex;
             align-items: center;
@@ -196,11 +196,11 @@
         }
 
         .user-actions button:hover {
-            background-color: rgba(255, 98, 0, 0.20);
+            background-color: var(--accent-background-color-hover);
         }
 
         .user-actions button i {
-            color: rgba(255, 98, 0, 1);
+            color: var(--accent-color);
         }
 
         .profile-section:not(:last-child) {
@@ -239,6 +239,7 @@
         .portfolio-item-image img {
             width: 100%;
             object-fit: cover;
+            max-height: 100px;
         }
 
         .portfolio-item-name {

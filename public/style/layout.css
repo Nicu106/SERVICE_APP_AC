@@ -2,8 +2,10 @@
 
 :root {
     --app-width: 400px;
-    --accent-color: rgba(255, 98, 0, 1);
-    --accent-background-color: rgba(255, 98, 0, 0.15);
+    --accent-rgb: 255, 98, 0;
+    --accent-color: rgba(var(--accent-rgb), 1);
+    --accent-background-color: rgba(var(--accent-rgb), 0.15);
+    --accent-background-color-hover: rgba(var(--accent-rgb), 0.20);
 }
 
 * {
@@ -46,11 +48,11 @@ body {
 }
 
 .custom-header {
-    padding: 10px 26px;
+    padding: 10px 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -63,8 +65,25 @@ body {
     transform: translateX(-50%);
 }
 
+.custom-header h1 i {
+    font-size: 22px;
+}
+
 .custom-header i {
     color: var(--accent-color);
+}
+
+.header-search {
+    font-size: 14px;
+    border: none;
+    padding: 8px 14px;
+    color: var(--accent-color);
+    background: var(--accent-background-color);
+    border-radius: 10px;
+}
+
+.header-search:hover {
+    background: var(--accent-background-color-hover);
 }
 
 .custom-header h1 {

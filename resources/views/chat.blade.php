@@ -19,7 +19,6 @@
 
     <style>
         .chat-container {
-            width: var(--app-width);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -86,8 +85,13 @@
         }
 
         .chat-actions {
+            max-width: calc(var(--app-width) - 20px);
             width: 100%;
             padding: 0 10px;
+            position: fixed;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .chat-input-container {

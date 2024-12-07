@@ -24,6 +24,9 @@
         <!-- Logo at the Top -->
         <header class="custom-header">
             <h1>SkillSource <i class="bi bi-tools"></i></h1>
+            <button class="header-search">
+                <i class="bi bi-search"></i>
+            </button>
         </header>
 
         <!-- Main Content -->
@@ -39,11 +42,6 @@
                     <i class="bi bi-house-door" style="font-size: 1.25rem;"></i>
                     <!-- <div class="small" style="font-size: 0.8rem;">Home</div> -->
                 </a>
-                <!-- Profile -->
-                <a href="{{route('profile')}}" class="navbar-icons text-center" style="font-size: 1rem; padding: 0.4rem;">
-                    <i class="bi bi-person" style="font-size: 1.5rem;"></i>
-                    <!-- <div class="small" style="font-size: 0.8rem;">Profile</div> -->
-                </a>
                 <!-- Chat -->
                 <a href="{{route('chat')}}" class="navbar-icons text-center" style="font-size: 1rem; padding: 0.4rem;">
                     <i class="bi bi-chat" style="font-size: 1.25rem;"></i>
@@ -53,6 +51,11 @@
                 <a href="{{route('booked')}}" class="navbar-icons text-center" style="font-size: 1rem; padding: 0.4rem;">
                     <i class="bi bi-calendar-check" style="font-size: 1.25rem;"></i>
                     <!-- <div class="small" style="font-size: 0.8rem;">Booked</div> -->
+                </a>
+                <!-- Profile -->
+                <a href="{{route('profile')}}" class="navbar-icons text-center" style="font-size: 1rem; padding: 0.4rem;">
+                    <i class="bi bi-person" style="font-size: 1.5rem;"></i>
+                    <!-- <div class="small" style="font-size: 0.8rem;">Profile</div> -->
                 </a>
             </div>
         </nav>
@@ -77,7 +80,7 @@
                 // Remove prompt after a few seconds
                 setTimeout(() => {
                     prompt.remove();
-                }, 8000);
+                }, 4000);
             });
         }
     </script>
